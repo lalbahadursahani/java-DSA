@@ -1,45 +1,36 @@
 import java.util.*;
+public class Array {
+    public static int linearSearch(int numbers[], int key) {
 
-import javax.sql.rowset.spi.SyncResolver;
-public class Array{
+       for (int i =0; i<numbers.length; i++) {
+         if (numbers[i]==key) {
+            return i;
+            
+        }
+    }
+    return -1;
 
-    public static void maxsubArray(int numbers[]){
-        int currSum=0;
-        int maxSum=Integer.MIN_VALUE;
 
-
-        for (int i= 0; i < numbers.length; i++) {
-            int start=i;
         
-            for (int j=i; j <numbers.length; j++) {
-                int end=j;
-                currSum=0;
-                for (int k=start; k<end; k++) {
-                    currSum+=numbers[k];
-
-                }
-                System.err.println(currSum);
-                if(maxSum<currSum){
-                    maxSum=currSum;
-                
-                }
-
-              
-                    
-                }
-                
-                
-System.out.println();
-                
-            }
-            System.out.println("max Sum=" +maxSum);
-        }    
+    }
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int key=sc.nextInt();
+    int numbers[]={1,3,4,5,6,8,7,10};
     
-       public static void main(String[] args){
-    int numbers[]={1,2,3,4,5,6,7,8};
-maxsubArray(numbers);
-    
-    
+    int index=linearSearch(numbers, key);
+    if (index==-1) {
+        System.out.println("not found");
+        
+    }else{
+        System.out.println("key is at index:"+index);
+    }
 
 }
 }
+      
+    
+        
+      
+
+
