@@ -23,7 +23,7 @@ public class matrices {
         
     
     public static void main(String[] args) {
-        int matrix[][]=new int[3][3];
+        int matrix[][]=new int[2][2];
         int n=matrix.length,m= matrix[0].length;
         Scanner sc=new Scanner(System .in);
     
